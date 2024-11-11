@@ -47,6 +47,11 @@
                 <i class="bi bi-cart4" style="color: white;"></i>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-us" data-aos="fade-up" data-aos-delay="600">
+                Entre em Contato
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -81,6 +86,11 @@
             <li class="nav-item">
               <a class="nav-link" href="#market" data-aos="fade-up" data-aos-delay="600">
                 <i class="bi bi-cart4" style="color: white;"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact-us" data-aos="fade-up" data-aos-delay="600">
+                Entre em Contato
               </a>
             </li>
           </ul>
@@ -123,6 +133,11 @@
           <li class="nav-item">
             <a class="nav-link text-white" href="#market" data-aos="fade-up" data-aos-delay="600">
               <i class="bi bi-cart4" style="color: white;"></i> Echo Lights
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-person-lines-fill"></i> Entre em Contato
             </a>
           </li>
         </ul>
@@ -437,7 +452,7 @@
           </div>
           <div class="card-body position-relative ">
               <button class="btn btn-outline-secondary btn-sm copy-btn" onclick="copyCode()">Copiar</button>
-              <pre class="code-block">
+              <pre class="code-block" id="code">
                   // Adicao da biblioteca de controle da fita de LED
                   #include &lt;Adafruit_NeoPixel.h&gt;
 
@@ -508,7 +523,7 @@
         <div class="row col-md-9 align-items-center gx-5 my-5">
           <h2 class="display-6 header mb-3 text-center" data-aos="fade-down" data-aos-delay="300">Explicação do Código:</h2>
           <p class="text-justify" data-aos="fade-down" data-aos-delay="400">
-            Em resumo, com o código rodando, o sensor KY-038 será capaz de "ouvir" o som de uma palma. Quando o volume captado pelo sensor ultrapassar o valor de 100, ele enviará um sinal para acender a fita LED. Ao receber outro sinal com o mesmo nível de intensidade, os LEDs serão apagados.
+            Em resumo, com o código rodando, o sensor KY-038 será capaz de "ouvir" o som de uma palma. Quando o volume captado pelo sensor ultrapassar o valor de 150, ele enviará um sinal para acender a fita LED. Ao receber outro sinal com o mesmo nível de intensidade, os LEDs serão apagados.
           </p>
         </div>
         <div class="row align-items-center gx-5 mb-5" id="functionContent">
@@ -643,7 +658,7 @@
           <h4 class="header display-6 mt-5 mb-4" data-aos="fade-up" data-aos-delay="330">
             Entre em contato conosco:
           </h4>
-          <div class="col-md-6 mb-4 d-flex flex-column align-items-center px-5">
+          <div class="col-md-4 mb-4 d-flex flex-column align-items-center px-5">
             <p class="lh-base" data-aos="fade-right" data-aos-delay="475">
               Nossas redes sociais:
             </p>
@@ -675,12 +690,34 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-6 d-flex flex-column gap-4  text-center">
+          <div class="col-md-4 mb-4 align-items-center px-5" data-bs-theme="dark">
+            <h5 class="header mt-5 mb-2" data-aos="fade-up" data-aos-delay="330">
+              Ficou com alguma dúvida?
+            </h5>
+            <p class="lh-base" data-aos="fade-right" data-aos-delay="475">
+              Envie uma mensagem!
+            </p>
+            <div class="form-floating mb-3">
+              <form method="post" class="form-floating">
+                <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Digite seu texto:">
+                <label for="floatingInput">Digite aqui:</label>
+                <button
+                type="button"
+                id="learnMoreBtn"
+                class="btn btn-primary rounded-pill mt-3 px-4 border-0 mb-5"
+                data-aos="fade-up" data-aos-delay="650"
+                >
+                  Enviar <i class="bi bi-envelope px-2"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex flex-column gap-4  text-center">
             <div class="order-2 d-flex flex-column flex-wrap align-items-center">
               <p class="m-2" data-aos="fade-up" data-aos-delay="475">
                 Quer um site como este?
               </p>
-              <button class="buttoni"  data-aos="fade-left" data-aos-delay="675">
+              <a class="buttoni" href="https://www.instagram.com/jao_oliviera/" target="_blank"  data-aos="fade-left" data-aos-delay="675">
                 Entre em Contato
                 <svg fill="currentColor" viewBox="0 0 24 24" class="iconi">
                   <path
@@ -689,7 +726,7 @@
                     fill-rule="evenodd"
                   ></path>
                 </svg>
-              </button>
+              </a>
             </div>
             <div class="order-1 d-flex flex-column flex-wrap align-items-center">
               <p class="m-2" data-aos="fade-up" data-aos-delay="475">
