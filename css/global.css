@@ -73,9 +73,12 @@ body, main{
     border-radius: 50%;
 }
 
-li i{
-    margin:0 1rem ;
-    color: skyblue !important;
+#passbybass li i{
+    color: skyblue ;
+}
+
+footer li i, #passbybass li i{
+    margin: 0 1rem ; 
 }
 
 .glow-none{
