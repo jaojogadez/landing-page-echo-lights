@@ -1,0 +1,56 @@
+#market{
+    margin-top: 7rem !important;
+}
+
+#market .btn:hover{
+    transform: scale(1.1);
+}
+
+/* Background e bordas dos itens do accordion */
+
+.accordion-item {
+    background-color: #343a40; /* Cinza escuro */
+    border-radius: 12px;
+    overflow: hidden;
+}
+  
+/* Botão do cabeçalho */
+.accordion-button {
+  background-color: #007bff; /* Azul */
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #0056b3; /* Azul mais escuro */
+  color: #f1f1f1;
+}
+
+/* Botão colapsado */
+.accordion-button.collapsed {
+  background-color: #495057 !important; /* Cinza médio */
+  color: #ffffff;
+}
+
+.accordion-button.collapsed:hover {
+  background-color: #343a40 !important; /* Cinza escuro */
+}
+
+/* Corpo do accordion */
+.accordion-body {
+  background-color: #212529; /* Cinza muito escuro */
+  color: #e9ecef;
+  border-top: 1px solid #007bff; /* Linha separadora */
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px;
+}
+
+/* Título e ícones */
+.accordion-body strong {
+  color: #ffdd57; /* Cor de destaque para textos fortes */
+}
+

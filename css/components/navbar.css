@@ -1,0 +1,43 @@
+nav{
+    font: normal normal 1em var(--header-font);
+    letter-spacing: 2.5px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.05);
+}
+ 
+nav ul{
+    font: normal normal 1em var(--secondary-font);
+    letter-spacing: normal;
+
+}
+
+.menu--movel { 
+    top: 0;
+    transform: translateY(-100%);
+    transition: .25s; 
+}
+
+.menu--show {
+    transform: translateY(0%);
+    transition: .6s;
+}
+
+.navbar-toggler:focus, .btn-close .btn-close-white:focus{
+    box-shadow: none;
+}
+
+/* RGB Effect */
+/* .glow::before, .glow::after{
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg , #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
+    background-size: 400%;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    z-index: -99;
+    animation: animate 20s linear infinite;
+} 
+ .glow::after{
+    filter: blur(10px);
+}  */

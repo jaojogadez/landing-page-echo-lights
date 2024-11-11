@@ -1,0 +1,39 @@
+#componentPiscaPisca{
+    left: 0;
+    min-height: 250px;
+    animation: pisca-pisca 20s linear infinite;
+    background:  url('../../assets/pisca-pisca.png') repeat-x center!important;
+    background-size: contain !important;
+}
+
+#components h3, #componenstsContent img{
+    margin-top: calc(13rem + 10vh) !important;
+}
+
+#componenstsContent img{
+    max-width: 150px;
+}
+
+.table img{
+    max-width: 100px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.table img:hover{
+   scale: 1.1;
+   transform: translateX(-1px);
+}   
+
+th, td  {
+   vertical-align: middle;
+}
+
+#passbybass{
+    margin-top: calc(13rem + 10vh) !important;
+}
+
+
+
+
+

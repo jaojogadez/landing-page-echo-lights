@@ -1,0 +1,68 @@
+#function a, #function p span{
+    color: skyblue;
+}
+
+.copy-btn {
+    position: absolute;
+    top: -35px;
+    right: 20px;
+} 
+
+
+.window-header {
+    background: var(--color-black);
+    border-radius: 15px 15px 0 0 !important;
+    position: relative;
+}
+
+.window-buttons {
+    display: flex;
+}
+
+.window-buttons span {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.red {
+    background-color: #ff605c;
+}
+
+.yellow {
+    background-color: #ffbd44;
+}
+
+.green {
+    background-color: #00ca4e;
+}
+
+.code-block {
+    padding: 15px;
+    font-family: monospace;
+    color: var(--Branco-Neve);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    border-radius: 0 0 15px 15px; /* Borda arredondada */
+    background: var(--color-black); /* Cor de fundo leve */
+}
+
+
+
+#function .text-justify{
+    text-align: justify;
+}
+
+.connectEcho{
+    content: "Ligado" !important;
+}
+
+#echolightConnect{
+    display: none;
+}
+
+#function .img-fluid {
+    filter: none;
+}
+
+

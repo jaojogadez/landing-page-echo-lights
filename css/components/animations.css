@@ -1,0 +1,109 @@
+/* Configurações das animações */
+.txt-animado span{
+    position: relative;
+}
+
+.txt-animado span::before{
+    content: "";
+    animation: palavras 30s infinite ;
+}
+
+.txt-animado span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid skyblue;
+    right: -10px;
+    animation: cursor .8s infinite, digita 30s steps(15) infinite;
+    width: calc(100% + 17px);
+    background-color: #212529;
+}
+
+#market .btn {
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+  
+#market .btn:active {
+    scale: 0.92;
+}
+  
+#market  .btn:hover {
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38);
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 80%, 85%{
+        width: calc(100% + 17px);
+    }
+}
+
+
+@keyframes cursor {
+    0%{
+        border-left: 2px solid #212529;
+    }
+}
+
+@keyframes palavras {
+    0%, 50% {
+        content: "Seja Bem Vindo!";
+    }
+    51%, 100% {
+        content: "Seja Bem Vinda!";
+    }
+}
+
+
+@keyframes scaler {
+    from{
+        scale: 1;
+    }
+    to{
+        scale: 1.2;
+    }
+}
+
+/* RBG ANIMATE 1 */
+
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+/* RGB ANIMATE 2 */
+
+@keyframes pisca-pisca {
+    0% { 
+        background-position: 0% 50%; 
+    }
+    50% { 
+        background-position: 100% 50%; 
+    }
+    100% { 
+        background-position: 0% 50%; 
+    }
+}

@@ -1,0 +1,95 @@
+/* Responsividade para telas maiores */
+
+@media (min-width: 992px){
+    #home .mb-4{
+        order: 2;
+    }
+
+    #homeContent, footer .container{
+        text-align: start !important;
+    }
+
+    footer .col-md-6{
+        align-items: initial !important;
+    }
+
+    nav ul{
+        margin: 0 2rem;
+    }
+
+    #about .mb-4{
+        order:  0 !important;
+    }   
+
+    #aboutContent .lh-base span{
+        display: block !important;
+    }
+
+    
+}
+
+/* Ajustes telas médias */
+
+@media (min-width: 768px){
+    #about .mb-4 h2, #functionContent .order-1 h3{
+        display: none;
+    }
+
+    
+    #aboutContent h2, #functionContent .order-2 h3{
+        display: block !important;
+    }
+
+    #about .mb-4{
+        order:  2 ;
+    }    
+    
+    #aboutContent p{
+        text-align: justify !important;
+    }
+
+    #aboutContent h2{
+        text-align: left !important;
+    }
+
+   
+    #aboutContent, #passbybassContent .col-md-6 .mb-4{
+        order: 1 !important;
+    }
+
+    .passbybassContent .mb-4{
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+
+    
+
+}
+
+
+/* Ajustes telas mais pequenas */
+
+@media (max-width: 768px){
+    #passbybass, #function, #market{
+        text-align: center;
+    }
+
+    #passbybass ul{
+        text-align: initial;
+        margin: 0 auto;
+        transform: translateX(calc(25% - 10vw))
+    }
+
+    .code-block, #code{
+        text-align: initial !important;
+    }
+}
+ 
+@media (max-width: 316px){
+    nav a p{
+        display: none !important;
+      
+    }
+}
+ 
