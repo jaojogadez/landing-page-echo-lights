@@ -77,7 +77,7 @@ body, main{
     color: skyblue ;
 }
 
-footer li i, #passbybass li i{
+footer li i, #passbybass li i, .offcanvas li i{
     margin: 0 1rem ; 
 }
 
