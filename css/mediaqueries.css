@@ -91,9 +91,9 @@
     }
 }
  
-@media (max-width: 400px){
+@media (max-width: 450px){
     .lastTD{
-            display: none;
+        display: none;
     }
 }
 
