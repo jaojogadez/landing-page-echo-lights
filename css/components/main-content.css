@@ -3,6 +3,10 @@
     letter-spacing: 2px;
 }
 
+.txt-animado{
+    font-size: calc(1em  + 1vw);
+}
+
 /* RGB Button */
 .btn-primary{
     position: relative;
@@ -59,14 +63,14 @@
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.384));
 }
 
-#aboutContent a {
+/* #aboutContent a {
     color: #000 !important;
     background-color: white !important;
 }
 #aboutContent a:hover{
     color: white !important;
     background-color: #000 !important;
-}
+} */
 i{
     transition: .3s ease;
 }

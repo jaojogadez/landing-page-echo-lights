@@ -24,7 +24,7 @@
     #aboutContent .lh-base span{
         display: block !important;
     }
-
+    
     
 }
 
@@ -46,10 +46,15 @@
     
     #aboutContent p{
         text-align: justify !important;
+        align-items: start !important;
     }
 
     #aboutContent h2{
         text-align: left !important;
+    }
+
+    #aboutContent p .mb-3{
+        align-items: start !important;
     }
 
    
@@ -62,6 +67,9 @@
         text-align: left !important;
     }
 
+    .txt-animado{
+        font-size: calc(.7em + 1vw) !important;
+    }
 }
 
 
@@ -83,6 +91,12 @@
     }
 }
  
+@media (max-width: 400px){
+    .lastTD{
+            display: none;
+    }
+}
+
 @media (max-width: 316px){
     nav a p{
         display: none !important;

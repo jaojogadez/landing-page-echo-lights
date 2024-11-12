@@ -10,6 +10,10 @@ nav ul{
 
 }
 
+.navbar-expand-lg{
+    font-size: calc(1em - 0.1vw);
+}
+
 .menu--movel { 
     top: 0;
     transform: translateY(-100%);
