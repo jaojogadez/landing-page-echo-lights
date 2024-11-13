@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* Variables CSS */
+
+:root{
+    /* Paleta Principal */
+    --color-black:#12130F;
+    --color-darkgren:#5B9279;
+    --color-green:#8FCB9B;
+    --color-white:#EAE6E5;
+    --color-brown:#8F8073;
+
+    /* Paleta Alternativa */
+    --Verde-Pinheiro:#2E8B57;
+    --Vermelho-Natal:#B22222;
+    --Branco-Neve:#F8F8FF;
+    --Dourado-Metálico:#DAA520;
+    --Azul-Neon:#00CED1;
+
+    /* Tipografia */
+    --header-font: "Orbitron";
+    --secondary-font: "Roboto", sans-serif;
+
+    --main-blue: #0d6efd;
+    --bg-dark: #212529 ;
+}
+
+::-webkit-scrollbar {
+    width: 10px;  
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);       
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color); /* A cor será definida via JS */
+    border-radius: 20px;       
+
+}
+
+
+body, html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    font: normal normal 1em var(--secondary-font);
+    overflow-x: hidden;
+}
+
+body, main{
+    min-height: 100vh;
+}
