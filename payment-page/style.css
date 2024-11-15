@@ -56,3 +56,19 @@ html, body{
 }
 
 /* Mobile Cards Configuration End */
+
+/* Desktop Cards Configuration Stard */
+#backimgDesktop-container{
+    min-height: 100vh;
+    background: black url('images/bg-main-desktop.png') no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 768px){
+    #backimgDesktop-container{
+        display: block !important;
+    }
+    #backimgMobile-container{
+        display: none !important;
+    }
+}
