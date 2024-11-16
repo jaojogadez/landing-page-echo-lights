@@ -33,6 +33,7 @@ html, body{
 
 #front-card{
     background: transparent url('images/bg-card-front.png') no-repeat ;
+    background-size: cover;
     z-index: 2;
     position: absolute;
     top: 193px;
@@ -41,6 +42,7 @@ html, body{
 
 #back-card{
     background: transparent url('images/bg-card-back.png') no-repeat ;
+    background-size: cover;
     z-index: 1;
     right: 0px;
 }
@@ -70,5 +72,14 @@ html, body{
     }
     #backimgMobile-container{
         display: none !important;
+    }
+}
+
+@media (max-width: 485px){
+    .container-sm{
+        max-width: 447px !important;
+        min-width: 100px !important;
+        max-height: 445px !important;
+        min-height: 50px !important;
     }
 }
