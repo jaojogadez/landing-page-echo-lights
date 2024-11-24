@@ -15,28 +15,23 @@
 <body>
 
   <div class="container-fluid p-0 d-flex align-items-center justify-content-center">
-    <div class="row align-items-center  w-100 ">
-      <div class="col-md-4 d-flex align-items-center justify-content-end flex-wrap p-3" id="backimgMobile-container">
-        <div class="container-sm p-0  order-2" id="front-card">
-          <div id="circles" class="w-100 mt-4 text-white d-flex align-items-center gap-3 px-5">
-            <i class="bi bi-circle-fill"></i>
-            <i class="bi bi-circle"></i>
-          </div>
-          <div id="card-content" class="w-100  mt-5">
-            <h1 id="number-card" class="text-white text-center fw-normal">0000 0000 0000 0000</h1>
-            <div class="d-flex justify-content-around text-white">
-              <span id="cardholder-name" class="text-uppercase">Jane Applessed</span>
-              <span id="card-date">00/00</span>
-            </div>
-          </div>
+    <div class="row align-items-center gx-5 w-100">
+      <div class="col-md-4" id="backimg-container">
+        <div class="container-sm" id="front-card">
+          <img 
+            src="images/bg-card-front.png" 
+            alt="front-card-image"
+            class="img-fluid"
+            >
         </div>
-        <div class="container-sm p-0  m-0 d-flex align-items-center justify-content-center text-white" id="back-card">
-          <div class="p-3 w-100 mb-1 d-flex justify-content-end">
-            <span id="cvc" class="mx-4 px-3 mt-1">000</span>
-          </div>
+        <div class="container-sm" id="back-card">
+          <img 
+            src="images/bg-card-back.png" 
+            alt="back-card-image"
+            class="img-fluid"
+            >
         </div>
       </div>
-      <div class="col-md-4 d-none" id="backimgDesktop-container"></div>
       <div class="col-md-8"></div>
     </div>
   </div>

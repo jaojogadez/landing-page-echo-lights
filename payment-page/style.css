@@ -22,64 +22,37 @@ html, body{
     font: normal normal 18px var(--secondary-font);
 }
 
-/* Mobile Cards Configuration Start */
-
-#backimgMobile-container{
-    height: 350px;
-    background: black url('images/bg-main-mobile.png') no-repeat center;
-    background-size: cover;
-    position: relative;
-}
-
-#front-card{
-    background: transparent url('images/bg-card-front.png') no-repeat ;
-    background-size: cover;
-    z-index: 2;
-    position: absolute;
-    top: 193px;
-    left: 20px;
+/* #front-card{
+    
 }
 
 #back-card{
-    background: transparent url('images/bg-card-back.png') no-repeat ;
+   
+} */
+
+
+/* Cards Configuration Start */
+#backimg-container{
+    background: black url('images/bg-main-mobile.png') no-repeat;
     background-size: cover;
-    z-index: 1;
-    right: 0px;
+    text-align: center;
 }
+/* Cards Configuration End */
 
-/* Style for size of card's box */
-.container-sm{
-    width: 447px;
-    height: 245px;
-}
 
-.bi-circle-fill{
-    font-size: 3em;
-}
-
-/* Mobile Cards Configuration End */
-
-/* Desktop Cards Configuration Stard */
-#backimgDesktop-container{
-    min-height: 100vh;
-    background: black url('images/bg-main-desktop.png') no-repeat;
-    background-size: cover;
-}
-
-@media (min-width: 768px){
-    #backimgDesktop-container{
-        display: block !important;
-    }
-    #backimgMobile-container{
-        display: none !important;
+@media (min-width: 768px){  
+    #backimg-container{
+        background: black url('images/bg-main-desktop.png') no-repeat;
+        background-size: cover;
+        min-height: 100vh;
     }
 }
 
 @media (max-width: 485px){
-    .container-sm{
+    /* .container-sm{
         max-width: 447px !important;
         min-width: 100px !important;
         max-height: 445px !important;
         min-height: 50px !important;
-    }
+    } */
 }
