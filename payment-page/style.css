@@ -33,9 +33,37 @@ html, body{
 
 /* Cards Configuration Start */
 #backimg-container{
+    position: relative;
     background: black url('images/bg-main-mobile.png') no-repeat;
+    min-height: 40vh !important;
     background-size: cover;
+}
+
+#aligment-cards{
     text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.container-sm img{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+    border-radius: 10px;
+}
+
+#front-card{
+    order: 2;
+    position: absolute;
+    top: 56.59%;
+    z-index: 9;
+}
+
+#back-card{
+    order: 1;
+
 }
 /* Cards Configuration End */
 
@@ -46,7 +74,25 @@ html, body{
         background-size: cover;
         min-height: 100vh;
     }
+
+    #aligment-cards{
+        position: absolute;
+        gap: 20px;
+        top: 50%;
+        transform: translate(50%,-50%);
+    }
+
+    #front-card{
+        order: 1;
+        transform: translateX(-50px);
+    }
+    
+    #back-card{
+        order: 2;
+    }
+    
 }
+
 
 @media (max-width: 485px){
     /* .container-sm{
