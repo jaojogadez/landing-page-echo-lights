@@ -59,8 +59,10 @@ html, body{
 
 #frontcard-content{
     top: 0;
-    width: 447px;
-    height: 245px;
+    max-width: 447px;
+    min-width: 100px;
+    max-height: 245px;
+    min-height: 80px;
 }
 
 #placeholder-card{
@@ -70,6 +72,10 @@ html, body{
 
 .circles{
     margin-bottom: 2rem;
+}
+
+.infos-card{
+    font-size: .8em;
 }
 
 @media (min-width: 768px){  
