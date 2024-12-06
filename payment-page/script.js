@@ -1,5 +1,7 @@
+const form = document.querySelector("form");
+
 const numberCard = document.getElementById("placeholder-card");
-numberCard.innerText = "0000000000000000"
+numberCard.innerText = "0000 0000 0000 0000"
 
 const nameCard = document.getElementById("name");
 nameCard.innerText = "Jane Appleseed"

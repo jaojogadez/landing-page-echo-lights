@@ -95,12 +95,12 @@ html, body{
     #front-card{
         top: -20%;
         order: 1;
-        transform: translateX(10px);
+        transform: translateX(-100px);
         margin-bottom: 20px;
     }
     
     #back-card{
-        transform: translate(105px, 90%);
+        transform: translate(0px, 90%);
     }
     
 }
