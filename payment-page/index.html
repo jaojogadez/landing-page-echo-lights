@@ -19,7 +19,7 @@
     <div class="row align-items-center gx-5 w-100">
       <div class="col-md-4" id="backimg-container">
         <div id="aligment-cards">
-          <div class="container-sm" id="front-card">
+          <div class="container-sm " id="front-card">
             <img
               src="images/bg-card-front.png"
               alt="front-card-image"
@@ -52,15 +52,69 @@
           </div>
         </div>
       </div>
-      <div class="col-md-8 border p-3">
-        <div class="container border col-6 p-3">
+      <div class="col-md-8 p-3">
+        <form class="container col-md-6 p-3 " method="post">
          
-          <div class="mb-3 text-uppercase small fw-bold">
+          <div class="mb-3 text-uppercase small fw-bold ">
             <label for="cardholder-name" class="form-label">Cardholder name</label>
-            <input type="text" class="form-control" id="cardholder-name" placeholder="e.g. Jane Appleseed">
+            <input 
+              type="text" 
+              class="form-control" 
+              id="cardholder-name" 
+              placeholder="e.g. Jane Appleseed"
+              required
+              autocomplete="name"
+              minlength="3"
+              >
           </div>
-          
-        </div> 
+          <div class="mb-3 text-uppercase small fw-bold">
+            <label for="cardholder-number" class="form-label">Card number</label>
+            <input 
+              type="number" 
+              class="form-control" 
+              id="cardholder-number" 
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+              autocomplete="on"
+              >
+          </div>
+          <div class="mb-3 text-uppercase small fw-bold row">
+            <div class="col">
+              <label for="cardholder-expdate" class="form-label w-100">Exp. date</label>
+              <input
+                type="number"
+                class="form-control"
+                id="cardholder-expdate"
+                placeholder="MM"
+                required
+                autocomplete="on"
+                >
+            </div>
+            <div class="col">
+              <label for="cardholder-mmyy" class="form-label">(mm/yy)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="cardholder-mmyy"
+                placeholder="YY"
+                required
+                autocomplete="on"
+                >
+            </div>
+            <div class="col">
+              <label for="cardholder-cvc" class="form-label">Cvc</label>
+              <input
+                type="number"
+                class="form-control"
+                id="cardholder-cvc"
+                placeholder="e.g. 123"
+                required
+                autocomplete="on"
+                >
+            </div>
+          </div>
+          <input type="submit" value="Confirm" class="btn btn-dark w-100">
+        </form> 
       </div>
     </div>
   </div>

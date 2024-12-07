@@ -78,6 +78,51 @@ html, body{
     font-size: .8em;
 }
 
+
+
+/* Form configuration start */
+label{
+    font: normal bold .85em var(--header-font);
+    letter-spacing: 2.5px;
+}
+input:focus{
+    border: 1px solid var(--purple) !important;
+    box-shadow: none !important;
+}
+.error-input{
+    border-color: var(--Red-inputerrors) !important;
+}
+.error-input::after{
+    content: "Can't be blank";
+    color: var(--Red-inputerrors);
+    text-transform: initial;
+    letter-spacing: 1px;
+}
+.error-number-input::after{
+    content: "Wrong format, numbers only";
+    color: var(--Red-inputerrors);
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+.btn-dark{
+    background-color: var(--Verydark);
+    font-size: .95em;
+    letter-spacing: 1px;
+}
+.btn-dark:hover{
+    background-color: var(--purple);
+}
+/* Form configuration end */
+
+.form-control-error{
+    border: 1px solid var(--Red-inputerrors) !important;
+}
+
+
 @media (min-width: 768px){  
     #backimg-container{
         background: black url('images/bg-main-desktop.png') no-repeat;
@@ -101,6 +146,10 @@ html, body{
     
     #back-card{
         transform: translate(0px, 90%);
+    }
+
+    form{
+        margin-left: 15rem !important;
     }
     
 }
