@@ -7,6 +7,7 @@
     --Lineargradient-activeinputborder:hsl(249, 99%, 64%);
     --purple: hsl(278, 94%, 30%);
     --Red-inputerrors: hsl(0, 100%, 66%);
+    --Green-inputerrors: #28a745;
     
     --White: hsl(0, 0%, 100%);
     --Lightgrayish: hsl(270, 3%, 87%);
@@ -118,9 +119,49 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 /* Form configuration end */
 
+/* Error Message Start */
 .form-control-error{
-    border: 1px solid var(--Red-inputerrors) !important;
+    border: 2px solid var(--Red-inputerrors) !important;
 }
+.form-control-error:focus{
+    border: 2px solid var(--Red-inputerrors) !important;
+}
+.form-message-error-name::after{
+    content: "Apenas letras são permitidas";
+    color: var(--Red-inputerrors);
+    text-transform: initial;
+    letter-spacing: 1px;
+    font-size: .85em;
+}
+.form-message-error-null::after{
+    content: "Por favor, preencha o campo";
+    color: var(--Red-inputerrors);
+    text-transform: initial;
+    letter-spacing: 1px;
+    font-size: .85em;
+}
+/* Error Message End */
+
+/* Check Message Start */
+.form-control-check{
+    border: 2px solid var(--Green-inputerrors) !important;
+}
+.form-control-check:focus{
+    border: 2px solid var(--Green-inputerrors) !important;
+}
+.bi-check2-circle{
+    color: var(--Green-inputerrors);
+    position: absolute;
+    top: 2.2rem;
+    right: 10px;
+}
+.bi-x-circle{
+    color: var(--Red-inputerrors);
+    position: absolute;
+    top: 2.2rem;
+    right: 10px;
+}
+/* Check Message End */
 
 
 @media (min-width: 768px){  
