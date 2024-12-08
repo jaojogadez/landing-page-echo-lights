@@ -9,8 +9,11 @@ const inputExpDate = document.getElementById("cardholder-expdate"); // Input Exp
 const inputMMYY = document.getElementById("cardholder-mmyy"); // Input MMYY
 const inputCVC = document.getElementById("cardholder-cvc"); // Input CVC
 const nameField = document.getElementById("nameField");
+const numberCardField = document.getElementById("numberCardField")
 const checkName = document.querySelector("#nameField .bi-check2-circle")
 const errorName = document.querySelector("#nameField .bi-x-circle")
+const checkNumberCard = document.querySelector("#numberCardField .bi-check2-circle")
+const errorNumberCard = document.querySelector("#numberCardField .bi-x-circle")
 
 numberCard.innerText = "0000 0000 0000 0000";
 nameCard.innerText = "Jane Appleseed";
@@ -48,5 +51,34 @@ inputName.addEventListener("input", () => {
             inputName.classList.remove("form-control-check")
         }
     }
+    nameCard.innerHTML = ""
+    nameCard.innerText += `${valueName}`
 })
+
+inputNumberCard.addEventListener("input", () => {
+    const valueNumberCard = inputNumberCard.value
+    const regexNumberCard = /(\d{4})(?=\d)/g // Regex para que captura um grupo de 4 digitos e permite apenas números
+    const formatNumberCard = valueNumberCard.replace(regexNumberCard, "$1 ")
+    console.log(formatNumberCard)
+    if(valueNumberCard.length == 16){
+        console.log("Padrão Atendido")
+        inputNumberCard.classList.add("form-control-check")
+        inputNumberCard.classList.remove("form-control-error")
+        numberCardField.classList.remove("form-message-error-null")
+        checkNumberCard.classList.remove("d-none")
+        errorNumberCard.classList.add("d-none")
+    }
+    else{ 
+        console.log("Padrão Não Atendido")
+        inputNumberCard.classList.remove("form-control-check")
+        inputNumberCard.classList.add("form-control-error")
+        numberCardField.classList.add("form-message-error-null")
+        checkNumberCard.classList.add("d-none")
+        errorNumberCard.classList.remove("d-none")
+    }
+
+    numberCard.innerHTML = ""
+    numberCard.innerHTML += `${formatNumberCard}`
+})
+
 
