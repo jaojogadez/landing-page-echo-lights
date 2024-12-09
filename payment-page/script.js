@@ -56,27 +56,33 @@ inputName.addEventListener("input", () => {
 })
 
 inputNumberCard.addEventListener("input", () => {
-    const valueNumberCard = inputNumberCard.value
-    const regexNumberCard = /(\d{4})(?=\d)/g // Regex para que captura um grupo de 4 digitos e permite apenas números
-    const formatNumberCard = valueNumberCard.replace(regexNumberCard, "$1 ")
-    console.log(formatNumberCard)
-    if(valueNumberCard.length == 16){
-        console.log("Padrão Atendido")
-        inputNumberCard.classList.add("form-control-check")
-        inputNumberCard.classList.remove("form-control-error")
-        numberCardField.classList.remove("form-message-error-null")
-        checkNumberCard.classList.remove("d-none")
-        errorNumberCard.classList.add("d-none")
-    }
-    else{ 
-        console.log("Padrão Não Atendido")
+    const valueNumberCard = inputNumberCard.value.replace(/\D/g, '')// Regex para remover letras
+    const regexNumberCard = /(\d{4})(?=\d)/g // Regex para que captura um grupo de 4 digitos
+    const formatNumberCard = valueNumberCard.replace(regexNumberCard, "$1 ").slice(0,19) // formata o valor do input para add espaços
+    inputNumberCard.value = formatNumberCard // Faz que o valor do input seja formatado tbm
+    if(valueNumberCard.length > 16){
         inputNumberCard.classList.remove("form-control-check")
+        inputNumberCard.classList.add("form-control-error")
+        numberCardField.classList.add("form-message-error-limit")
+        checkNumberCard.classList.add("d-none")
+        errorNumberCard.classList.remove("d-none")
+    }
+    else if(valueNumberCard.length < 16){ 
+        inputNumberCard.classList.remove("form-control-check")
+        numberCardField.classList.remove("form-message-error-limit")
         inputNumberCard.classList.add("form-control-error")
         numberCardField.classList.add("form-message-error-null")
         checkNumberCard.classList.add("d-none")
         errorNumberCard.classList.remove("d-none")
     }
-
+    else{
+        inputNumberCard.classList.add("form-control-check")
+        inputNumberCard.classList.remove("form-control-error")
+        numberCardField.classList.remove("form-message-error-null")
+        checkNumberCard.classList.remove("d-none")
+        errorNumberCard.classList.add("d-none")
+        numberCardField.classList.remove("form-message-error-limit")
+    }
     numberCard.innerHTML = ""
     numberCard.innerHTML += `${formatNumberCard}`
 })
