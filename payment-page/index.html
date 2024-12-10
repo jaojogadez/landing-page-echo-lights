@@ -38,7 +38,7 @@
                     <span id="name"></span>
                   </div>
                   <div class="col-3">
-                    <span id="date"></span>
+                    <span id="dateMM"></span>/<span id="dateYY"></span>
                   </div>
                 </div>
             </div>
@@ -79,47 +79,86 @@
               placeholder="e.g. 1234 5678 9123 0000"
               maxlength="19"
               required
-              autocomplete="on"
+              autocomplete="cc-number"
               >
               <i class="bi bi-check2-circle d-none"></i>
               <i class="bi bi-x-circle d-none"></i>
           </div>
           <!-- Date -->
           <div class="mb-3 text-uppercase small fw-bold row">
-            <div class="col">
+            <div class="col" id="expdate-field">
               <label for="cardholder-expdate" class="form-label w-100">Exp. date</label>
-              <input
-                type="number"
-                class="form-control"
-                id="cardholder-expdate"
-                placeholder="MM"
-                required
-                autocomplete="on"
-                >
+              <select class="form-select" id="cardholder-expdate" required>
+                <option selected disabled>MM</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>            
             </div>
             <!-- Year -->
-            <div class="col">
+            <div class="col" id="yy-field">
               <label for="cardholder-mmyy" class="form-label">(mm/yy)</label>
-              <input
-                type="number"
-                class="form-control"
-                id="cardholder-mmyy"
-                placeholder="YY"
-                required
-                autocomplete="on"
-                >
+              <select class="form-select" id="cardholder-mmyy" required>
+                <option selected disabled>YY</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+              </select>
             </div>
             <!-- CVC -->
-            <div class="col">
+            <div class="col position-relative" id="cvc-field">
               <label for="cardholder-cvc" class="form-label">Cvc</label>
               <input
-                type="number"
+                type="text"
                 class="form-control"
                 id="cardholder-cvc"
                 placeholder="e.g. 123"
                 required
                 autocomplete="on"
+                maxlength="3"
                 >
+                <i class="bi bi-check2-circle d-none"></i>
+                <i class="bi bi-x-circle d-none"></i>
             </div>
           </div>
           <input type="submit" value="Confirm" class="btn btn-dark w-100">

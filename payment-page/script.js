@@ -1,7 +1,8 @@
 const form = document.querySelector("form"); // Form
 const numberCard = document.getElementById("placeholder-card"); // Number HTML
 const nameCard = document.getElementById("name"); // Name HTML
-const dateCard = document.getElementById("date"); // Date HTML
+const dateCardMM = document.getElementById("dateMM"); // Date HTML
+const dateCardYY = document.getElementById("dateYY"); // Date HTML
 const cvcCard = document.getElementById("cvc"); // CVC HTML
 const inputName = document.getElementById("cardholder-name"); // Input Name
 const inputNumberCard = document.getElementById("cardholder-number"); // Input Number
@@ -10,17 +11,29 @@ const inputMMYY = document.getElementById("cardholder-mmyy"); // Input MMYY
 const inputCVC = document.getElementById("cardholder-cvc"); // Input CVC
 const nameField = document.getElementById("nameField");
 const numberCardField = document.getElementById("numberCardField")
+const cvcField = document.getElementById("cvc-field")
+const expdateField = document.getElementById("expdate-field")
+const yyfield = document.getElementById("yy-field")
 const checkName = document.querySelector("#nameField .bi-check2-circle")
 const errorName = document.querySelector("#nameField .bi-x-circle")
 const checkNumberCard = document.querySelector("#numberCardField .bi-check2-circle")
 const errorNumberCard = document.querySelector("#numberCardField .bi-x-circle")
+const checkcvc = document.querySelector("#cvc-field .bi-check2-circle")
+const errorcvc = document.querySelector("#cvc-field .bi-x-circle")
 
 numberCard.innerText = "0000 0000 0000 0000";
 nameCard.innerText = "Jane Appleseed";
-dateCard.innerText = "00/00";
+dateCardMM.innerText = "00";
+dateCardYY.innerText = "00";
 //cvcCard.innerText = "000";
 
 form.addEventListener("submit", (event) => {
+    if(valueExpDate === undefined || valueExpDate === "MM"){
+        expdateField.classList.add("form-message-error-select")
+    }
+    else{
+        expdateField.classList.remove("form-message-error-select")
+    }
     event.preventDefault()
 })
 
@@ -88,3 +101,59 @@ inputNumberCard.addEventListener("input", () => {
 })
 
 
+inputExpDate.addEventListener("input", () => {
+    let valueExpDate = inputExpDate.value
+    if(valueExpDate !== undefined && valueExpDate !== "MM"){
+        inputExpDate.classList.add("form-control-check")
+       
+    }
+    else{
+        inputExpDate.classList.remove("form-control-check")
+    }
+    dateCardMM.innerHTML = ""
+    if(valueExpDate < 10){
+        dateCardMM.innerHTML += "0" + valueExpDate
+    }
+    else{
+        dateCardMM.innerHTML += valueExpDate
+    }
+})
+
+inputMMYY.addEventListener("input", () => {
+    let valueYY = inputMMYY.value
+    if(valueYY !== undefined && valueYY !== "YY"){
+        inputMMYY.classList.add("form-control-check")
+       
+    }
+    else{
+        inputMMYY.classList.remove("form-control-check")
+    }
+    dateCardYY.innerHTML = ""
+    if(valueYY < 10){
+        dateCardYY.innerHTML += "0" + valueYY
+    }
+    else{
+        dateCardYY.innerHTML += valueYY
+    }
+})
+
+inputCVC.addEventListener("input", () =>{
+    const valueCVC = inputCVC.value
+    const regexCVC = /^[0-9]+$/g
+    const isValidCVC = regexCVC.test(valueCVC)
+    if(isValidCVC === true && valueCVC.length === 3){
+        inputCVC.classList.add("form-control-check")
+        inputCVC.classList.remove("form-control-error")
+        checkcvc.classList.remove("d-none")
+        errorcvc.classList.add("d-none")
+        cvcField.classList.remove("form-message-error-cvc")
+    }
+    else{
+        inputCVC.classList.remove("form-control-check")
+        inputCVC.classList.add("form-control-error")
+        checkcvc.classList.add("d-none")
+        errorcvc.classList.remove("d-none")
+        cvcField.classList.add("form-message-error-cvc")
+        
+    }
+})
