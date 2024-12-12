@@ -127,7 +127,7 @@ input[type="number"]::-webkit-inner-spin-button{
     border: 2px solid var(--Red-inputerrors) !important;
 }
 .form-message-error-name::after{
-    content: "Apenas letras são permitidas";
+    content: "Digite no mínimo 3 letras e somente letras serão aceitas";
     color: var(--Red-inputerrors);
     text-transform: initial;
     letter-spacing: 1px;

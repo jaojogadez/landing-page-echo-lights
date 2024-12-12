@@ -27,23 +27,11 @@ dateCardMM.innerText = "00";
 dateCardYY.innerText = "00";
 //cvcCard.innerText = "000";
 
-form.addEventListener("submit", (event) => {
-    if(valueExpDate === undefined || valueExpDate === "MM"){
-        expdateField.classList.add("form-message-error-select")
-    }
-    else{
-        expdateField.classList.remove("form-message-error-select")
-    }
-    event.preventDefault()
-})
-
-
 inputName.addEventListener("input", () => {
     const valueName = inputName.value
     const regexName = /^[a-zA-ZÀ-ÿ\s]+$/ // Regex para permitir apenas letras e valida a string inteira
     const isValidName = regexName.test(valueName)
-    if (isValidName === true){
-        console.log("Padrão Atendido")
+    if (isValidName === true && valueName.length >= 3){
         errorName.classList.add("d-none")
         checkName.classList.remove("d-none")
         inputName.classList.add("form-control-check")
@@ -52,7 +40,6 @@ inputName.addEventListener("input", () => {
         nameField.classList.remove("form-message-error-null")
     }
     else{
-        console.log("Padrão Não Atendido")
         checkName.classList.add("d-none")
         errorName.classList.remove("d-none")
         inputName.classList.remove("form-control-check")
@@ -101,11 +88,12 @@ inputNumberCard.addEventListener("input", () => {
 })
 
 
+let valueExpDate;
 inputExpDate.addEventListener("input", () => {
-    let valueExpDate = inputExpDate.value
+    valueExpDate = inputExpDate.value
     if(valueExpDate !== undefined && valueExpDate !== "MM"){
         inputExpDate.classList.add("form-control-check")
-       
+        expdateField.classList.remove("form-message-error-select")
     }
     else{
         inputExpDate.classList.remove("form-control-check")
@@ -119,11 +107,12 @@ inputExpDate.addEventListener("input", () => {
     }
 })
 
+let valueYY;
 inputMMYY.addEventListener("input", () => {
-    let valueYY = inputMMYY.value
+    valueYY = inputMMYY.value
     if(valueYY !== undefined && valueYY !== "YY"){
         inputMMYY.classList.add("form-control-check")
-       
+        yyfield.classList.remove("form-message-error-select")
     }
     else{
         inputMMYY.classList.remove("form-control-check")
@@ -157,3 +146,19 @@ inputCVC.addEventListener("input", () =>{
         
     }
 })
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+    if(valueExpDate === undefined || valueExpDate === "MM"){
+        expdateField.classList.add("form-message-error-select")
+        inputExpDate.classList.add("form-control-error")
+    }
+    else if(valueYY === undefined || valueYY === "YY"){
+        yyfield.classList.add("form-message-error-select")
+        inputMMYY.classList.add("form-control-error")
+    }
+    else{
+        console.log("Formulário Enviado!")
+    }
+})
+
