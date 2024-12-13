@@ -59,9 +59,6 @@ html, body{
     transform: translateX(50px);
 }
 /* Cards Configuration End */
-#backcard-content{
-    border: 2px solid red;
-} */
 #frontcard-content{
     top: 0;
     width: auto;
