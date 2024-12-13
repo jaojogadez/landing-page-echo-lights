@@ -16,6 +16,7 @@
 html, body{
     min-height: 100vh;
     font: normal normal 18px var(--secondary-font);
+    overflow-x: hidden;
 }
 /* Cards Configuration Start */
 #front-card,
@@ -57,11 +58,12 @@ html, body{
 #back-card{
     transform: translateX(50px);
 }
+
 /* Cards Configuration End */
-#frontcard-content,
+/* #frontcard-content,
 #backcard-content{
     border: 2px solid red;
-}
+} */
 #frontcard-content{
     top: 0;
     width: auto;
@@ -181,6 +183,37 @@ input[type="number"]::-webkit-inner-spin-button{
     right: 23px;
 }
 /* Check Message End */
+@media (min-width: 1400px){  
+    #backcard-content{
+        top: 6rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1300px){  
+    #backcard-content{
+        top: 4.5rem;
+    }
+    .circles{
+        margin-bottom: .4rem;
+    }
+    #frontcard-content{
+        padding: 0 20px !important;
+        justify-content: space-evenly !important;
+    }    
+    #number-card-placeholder{
+        margin-bottom: 0rem !important;
+    }
+    #placeholder-card, .circles, .infos-card{
+        font-size: calc(5px + 30%);
+    }
+    #backcard-content{
+        top: calc(40%);
+    }
+}
+@media(min-width: 769px) and (max-width: 825px){
+    #placeholder-card, .infos-card{
+        font-size: calc(5px + 20%);
+    }
+}
 @media (min-width: 768px){  
     #card-container{
         background: black url('images/bg-main-desktop.png') no-repeat;
@@ -203,12 +236,13 @@ input[type="number"]::-webkit-inner-spin-button{
         transform: translate(0px, 90%);
     }
     form{
-        margin-left: 15rem !important;
+        max-width: 100%;
+        translate: 10vw 0;
     }
 }
 @media (max-width: 768px){
     form{
-        margin-top: 10rem;
+        margin: 5rem 0 2rem;
     }
     #frontcard-content{
         right: 5rem;
@@ -241,5 +275,10 @@ input[type="number"]::-webkit-inner-spin-button{
         top: 3.158rem;
         right: 7rem;
         font-size: .7em;
+    }
+}
+@media (max-width: 488px) {
+    #placeholder-card, .circles, .infos-card{
+        font-size: calc(30%);
     }
 }
