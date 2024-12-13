@@ -24,7 +24,12 @@ html, body{
 }
 
 /* Cards Configuration Start */
-#backimg-container{
+#front-card,
+#back-card {
+    position: relative; 
+}
+
+#card-container{
     position: relative;
     background: black url('images/bg-main-mobile.png') no-repeat;
     min-height: 40vh;
@@ -39,6 +44,7 @@ html, body{
     align-items: center;
     position: relative;
     margin-top: 3rem;
+    gap: 1rem;
 }
 
 .container-sm img{
@@ -64,6 +70,19 @@ html, body{
     min-width: 100px;
     max-height: 245px;
     min-height: 80px;
+}
+
+#backcard-content{
+    top: 68px;
+    right: 45px;
+    max-width: 447px;
+    min-width: 100px;
+    max-height: 245px;
+    min-height: 80px;
+}
+
+#cvc{
+    letter-spacing: 2px;
 }
 
 #placeholder-card{
@@ -181,9 +200,8 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 /* Check Message End */
 
-
 @media (min-width: 768px){  
-    #backimg-container{
+    #card-container{
         background: black url('images/bg-main-desktop.png') no-repeat;
         background-size: cover;
         min-height: 100vh ;

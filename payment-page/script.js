@@ -25,7 +25,7 @@ numberCard.innerText = "0000 0000 0000 0000";
 nameCard.innerText = "Jane Appleseed";
 dateCardMM.innerText = "00";
 dateCardYY.innerText = "00";
-//cvcCard.innerText = "000";
+cvcCard.innerText = "000";
 
 inputName.addEventListener("input", () => {
     const valueName = inputName.value
@@ -142,9 +142,10 @@ inputCVC.addEventListener("input", () =>{
         inputCVC.classList.add("form-control-error")
         checkcvc.classList.add("d-none")
         errorcvc.classList.remove("d-none")
-        cvcField.classList.add("form-message-error-cvc")
-        
+        cvcField.classList.add("form-message-error-cvc")   
     }
+    cvcCard.innerHTML = ""
+    cvcCard.innerHTML += valueCVC
 })
 
 form.addEventListener("submit", (event) => {
@@ -158,7 +159,7 @@ form.addEventListener("submit", (event) => {
         inputMMYY.classList.add("form-control-error")
     }
     else{
-        console.log("Formulário Enviado!")
+        alert("Formulário enviado!")
     }
 })
 

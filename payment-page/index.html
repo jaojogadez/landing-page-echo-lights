@@ -17,7 +17,7 @@
 
   <div class="container-fluid p-0 d-flex align-items-center justify-content-center">
     <div class="row align-items-center gx-5 w-100">
-      <div class="col-md-4" id="backimg-container">
+      <div class="col-md-4 text-white" id="card-container">
         <div id="aligment-cards">
           <div class="container-sm " id="front-card">
             <img
@@ -25,7 +25,7 @@
               alt="front-card-image"
               class="img-fluid position-relative"
             >
-            <div id="frontcard-content" class="container position-absolute text-white p-4 d-flex flex-column  justify-content-between">
+            <div id="frontcard-content" class="container position-absolute p-4 d-flex flex-column  justify-content-between">
                 <div class="circles d-flex align-items-center gap-2">
                   <i class="bi bi-circle-fill fs-1"></i>
                   <i class="bi bi-circle fs-5"></i>
@@ -48,7 +48,10 @@
               src="images/bg-card-back.png"
               alt="back-card-image"
               class="img-fluid position-relative"
-              >
+            >
+            <div id="backcard-content" class="container position-absolute d-flex align-items-center justify-content-end">
+              <span id="cvc"></span>
+            </div>
           </div>
         </div>
       </div>
