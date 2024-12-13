@@ -122,6 +122,7 @@ input[type="number"]::-webkit-inner-spin-button{
 /* Error Message Start */
 .form-control-error{
     border: 2px solid var(--Red-inputerrors) !important;
+    animation: shake-error .13s 3;
 }
 .form-control-error:focus{
     border: 2px solid var(--Red-inputerrors) !important;
@@ -275,5 +276,17 @@ input[type="number"]::-webkit-inner-spin-button{
 @media (max-width: 488px) {
     #placeholder-card, .circles, .infos-card{
         font-size: calc(30%);
+    }
+}
+
+@keyframes shake-error {
+    0%{
+        transform: translateX(0);
+    }
+    40%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(-10px);
     }
 }

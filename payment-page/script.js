@@ -150,6 +150,8 @@ inputCVC.addEventListener("input", () =>{
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
+    const inputs = document.querySelectorAll("input")
+    const selects = document.querySelectorAll("select")
     if(valueExpDate === undefined || valueExpDate === "MM"){
         expdateField.classList.add("form-message-error-select")
         inputExpDate.classList.add("form-control-error")
@@ -159,7 +161,7 @@ form.addEventListener("submit", (event) => {
         inputMMYY.classList.add("form-control-error")
     }
     else{
-        alert("Formulário enviado!")
+        alert("Formulário Enviado")
     }
 })
 
