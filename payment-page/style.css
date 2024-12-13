@@ -58,9 +58,7 @@ html, body{
 #back-card{
     transform: translateX(50px);
 }
-
 /* Cards Configuration End */
-/* #frontcard-content,
 #backcard-content{
     border: 2px solid red;
 } */
