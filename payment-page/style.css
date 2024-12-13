@@ -1,41 +1,33 @@
 /* General Configurations */
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
 :root{
     --Lineargradient-activeinputborder:hsl(249, 99%, 64%);
     --purple: hsl(278, 94%, 30%);
     --Red-inputerrors: hsl(0, 100%, 66%);
-    --Green-inputerrors: #28a745;
-    
+    --Green-inputerrors: #28a745;   
     --White: hsl(0, 0%, 100%);
     --Lightgrayish: hsl(270, 3%, 87%);
     --Darkgrayish: hsl(279, 6%, 55%);
     --Verydark: hsl(278, 68%, 11%);
-
     --header-font: "Orbitron";
     --secondary-font: "Roboto", sans-serif;
 }
-
 html, body{
     min-height: 100vh;
     font: normal normal 18px var(--secondary-font);
 }
-
 /* Cards Configuration Start */
 #front-card,
 #back-card {
     position: relative; 
 }
-
 #card-container{
     position: relative;
     background: black url('images/bg-main-mobile.png') no-repeat;
     min-height: 40vh;
     background-size: cover;
 }
-
 #aligment-cards{
     text-align: center;
     display: flex;
@@ -46,67 +38,53 @@ html, body{
     margin-top: 3rem;
     gap: 1rem;
 }
-
 .container-sm img{
     max-width: 100%;
     height: auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
     border-radius: 10px;
 }
-
 #front-card, #back-card{
     position: relative;
     width: 100%;
 }
-
 #front-card{
     position: absolute;
     top: 56.59%;
     z-index: 9;
     transform: translateX(-50px);
 }
-
 #back-card{
     transform: translateX(50px);
 }
 /* Cards Configuration End */
-
 #frontcard-content,
 #backcard-content{
     border: 2px solid red;
 }
-
 #frontcard-content{
     top: 0;
     width: auto;
     height: 100%;
 }
-
 #backcard-content{
     top: 95px;
     right: 45px;
     width: auto;
 }
-
 #cvc{
     letter-spacing: 2px;
 }
-
 #placeholder-card{
     word-spacing: 10px;
     letter-spacing: 2px;
 }
-
 .circles{
     margin-bottom: 2rem;
 }
-
 .infos-card{
     font-size: .8em;
 }
-
-
-
 /* Form configuration start */
 label{
     font: normal bold .85em var(--header-font);
@@ -144,7 +122,6 @@ input[type="number"]::-webkit-inner-spin-button{
     background-color: var(--purple);
 }
 /* Form configuration end */
-
 /* Error Message Start */
 .form-control-error{
     border: 2px solid var(--Red-inputerrors) !important;
@@ -181,7 +158,6 @@ input[type="number"]::-webkit-inner-spin-button{
     font-size: .65em;
 }
 /* Error Message End */
-
 /* Check Message Start */
 .form-control-check{
     border: 2px solid var(--Green-inputerrors) !important;
@@ -201,45 +177,35 @@ input[type="number"]::-webkit-inner-spin-button{
     top: 2.2rem;
     right: 10px;
 }
-
 #cvc-field .bi-check2-circle, #cvc-field .bi-x-circle{
     right: 23px;
 }
 /* Check Message End */
-
 @media (min-width: 768px){  
     #card-container{
         background: black url('images/bg-main-desktop.png') no-repeat;
         background-size: cover;
         min-height: 100vh ;
     }
-
     #aligment-cards{
         position: absolute;
         gap: 20px;
         top: 50%;
         transform: translate(50%,-115%);
     }
-
     #front-card{
         top: -20%;
         order: 1;
         transform: translateX(-100px);
         margin-bottom: 20px;
-    }
-    
+    }    
     #back-card{
         transform: translate(0px, 90%);
     }
-
     form{
         margin-left: 15rem !important;
     }
-    
 }
-
-
-
 @media (max-width: 768px){
     form{
         margin-top: 10rem;
@@ -247,23 +213,16 @@ input[type="number"]::-webkit-inner-spin-button{
     #frontcard-content{
         right: 5rem;
     }
-    
     #backcard-content{
         top: 6rem;
         right: 5rem;
     }
 }
-
 @media (max-width: 548px){
     .container-sm img{
         max-width: 250px;
         min-width: 100px;
     }
-    /* #frontcard-content,
-    #backcard-content{
-        font-size: .7em;
-    } */
-
     .circles{
         margin-bottom: .4rem;
     }
