@@ -48,8 +48,15 @@ html, body{
 }
 
 .container-sm img{
+    max-width: 100%;
+    height: auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
     border-radius: 10px;
+}
+
+#front-card, #back-card{
+    position: relative;
+    width: 100%;
 }
 
 #front-card{
@@ -64,21 +71,21 @@ html, body{
 }
 /* Cards Configuration End */
 
+#frontcard-content,
+#backcard-content{
+    border: 2px solid red;
+}
+
 #frontcard-content{
     top: 0;
-    max-width: 447px;
-    min-width: 100px;
-    max-height: 245px;
-    min-height: 80px;
+    width: auto;
+    height: 100%;
 }
 
 #backcard-content{
-    top: 68px;
+    top: 95px;
     right: 45px;
-    max-width: 447px;
-    min-width: 100px;
-    max-height: 245px;
-    min-height: 80px;
+    width: auto;
 }
 
 #cvc{
@@ -232,9 +239,48 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 
 
+
+@media (max-width: 768px){
+    form{
+        margin-top: 10rem;
+    }
+    #frontcard-content{
+        right: 5rem;
+    }
+    
+    #backcard-content{
+        top: 6rem;
+        right: 5rem;
+    }
+}
+
 @media (max-width: 548px){
     .container-sm img{
         max-width: 250px;
         min-width: 100px;
+    }
+    /* #frontcard-content,
+    #backcard-content{
+        font-size: .7em;
+    } */
+
+    .circles{
+        margin-bottom: .4rem;
+    }
+    .infos-card{
+        font-size: .6em;
+    }
+    #frontcard-content{
+        top: -1rem;
+        left: 5.5rem;
+        right: 5rem;
+    }
+    #placeholder-card{
+        font-size: 0.5em;
+    }
+    #backcard-content{
+        top: 3.158rem;
+        right: 7rem;
+        font-size: .7em;
     }
 }
