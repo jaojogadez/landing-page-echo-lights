@@ -161,7 +161,12 @@ form.addEventListener("submit", (event) => {
         inputMMYY.classList.add("form-control-error")
     }
     else{
-        alert("Formulário Enviado")
+        let inputs = document.querySelectorAll("input")
+        let newArray = Array.from(inputs)
+        console.log(newArray)
+        inputs.forEach(input =>{
+            console.log(input.classList)
+        })
     }
 })
 

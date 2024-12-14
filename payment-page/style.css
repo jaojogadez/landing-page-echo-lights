@@ -61,7 +61,7 @@ html, body{
 /* Cards Configuration End */
 #frontcard-content{
     top: 0;
-    width: auto;
+    width: 100% !important;
     height: 100%;
 }
 #backcard-content{
@@ -241,7 +241,8 @@ input[type="number"]::-webkit-inner-spin-button{
         margin: 5rem 0 2rem;
     }
     #frontcard-content{
-        right: 5rem;
+        border: 2px solid green;
+        left: 10%;
     }
     #backcard-content{
         top: 6rem;
@@ -250,32 +251,42 @@ input[type="number"]::-webkit-inner-spin-button{
 }
 @media (max-width: 548px){
     .container-sm img{
-        max-width: 250px;
-        min-width: 100px;
+        max-width: 90%;
     }
-    .circles{
-        margin-bottom: .4rem;
-    }
-    .infos-card{
-        font-size: .6em;
+    #placeholder-card, .circles, .infos-card, #backcard-content{
+        font-size: calc(80%);
     }
     #frontcard-content{
-        top: -1rem;
-        left: 5.5rem;
-        right: 5rem;
+        left: 7%;
+        max-width: 90% ;
     }
     #placeholder-card{
-        font-size: 0.5em;
+        width: 100%;
+    }
+    .circles{
+        margin-bottom: 0%;
     }
     #backcard-content{
-        top: 3.158rem;
-        right: 7rem;
-        font-size: .7em;
+        top: 43%;
+        right: 15%;
     }
 }
-@media (max-width: 488px) {
+@media (max-width: 414px) {
     #placeholder-card, .circles, .infos-card{
-        font-size: calc(30%);
+        font-size: calc(1em - 30%);
+    }
+}
+@media (max-width: 380px) {
+    #placeholder-card, .circles, .infos-card{
+        font-size: calc(1em - 50%);
+    }
+    #number-card-placeholder{
+        margin-bottom: 0rem !important;
+    }
+}
+@media (max-width: 324px) {
+    #frontcard-content{
+        padding: 10px 20px 10px 15px !important;
     }
 }
 
