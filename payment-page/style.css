@@ -241,7 +241,6 @@ input[type="number"]::-webkit-inner-spin-button{
         margin: 5rem 0 2rem;
     }
     #frontcard-content{
-        border: 2px solid green;
         left: 10%;
     }
     #backcard-content{
