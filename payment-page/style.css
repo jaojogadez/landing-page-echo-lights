@@ -105,6 +105,10 @@ input:focus, select:focus{
     border: 2px solid var(--Red-inputerrors) !important;
     animation: shake-error .13s 3;
 }
+.form-control-error-submit{
+    border: 3px solid var(--Red-inputerrors) !important;
+    animation: shake-error .13s 3;
+}
 .form-control-error:focus{
     border: 2px solid var(--Red-inputerrors) !important;
 }
@@ -216,6 +220,10 @@ input:focus, select:focus{
         max-width: 100%;
         translate: 10vw 0;
     }
+    .alert-danger{
+        top: -4rem;
+        right: 5.45rem;
+    }
 }
 @media (max-width: 768px){
     form{
@@ -272,7 +280,6 @@ input:focus, select:focus{
         padding: 10px 20px 10px 15px !important;
     }
 }
-
 @keyframes shake-error {
     0%{
         transform: translateX(0);
@@ -283,4 +290,7 @@ input:focus, select:focus{
     100%{
         transform: translateX(-10px);
     }
+}
+.shake-error{
+    animation: shake-error .13s 3 !important;
 }

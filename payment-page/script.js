@@ -150,23 +150,31 @@ inputCVC.addEventListener("input", () =>{
 
 form.addEventListener("submit", (event) => {
     event.preventDefault()
-    const inputs = document.querySelectorAll("input")
-    const selects = document.querySelectorAll("select")
+    let hasError = false
     if(valueExpDate === undefined || valueExpDate === "MM"){
+        hasError = true
         expdateField.classList.add("form-message-error-select")
         inputExpDate.classList.add("form-control-error")
     }
     else if(valueYY === undefined || valueYY === "YY"){
+        hasError = true
         yyfield.classList.add("form-message-error-select")
         inputMMYY.classList.add("form-control-error")
     }
     else{
         let inputs = document.querySelectorAll("input")
-        let newArray = Array.from(inputs)
-        console.log(newArray)
-        inputs.forEach(input =>{
-            console.log(input.classList)
+        let inputArray = Array.from(inputs)
+        inputArray.forEach(input => {
+            if(input.classList.contains("form-control-error")){
+                hasError = true
+            }
         })
+        if(hasError === true){
+            alert("Por favor, preencha todos os campos corretamente")
+        }
+        else{
+            alert("Formulário enviado com sucesso!")
+        }
     }
 })
 
