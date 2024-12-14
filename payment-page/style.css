@@ -91,25 +91,6 @@ input:focus, select:focus{
     border: 1px solid var(--purple) !important;
     box-shadow: none !important;
 }
-.error-input{
-    border-color: var(--Red-inputerrors) !important;
-}
-.error-input::after{
-    content: "Can't be blank";
-    color: var(--Red-inputerrors);
-    text-transform: initial;
-    letter-spacing: 1px;
-}
-.error-number-input::after{
-    content: "Wrong format, numbers only";
-    color: var(--Red-inputerrors);
-}
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-input[type="number"]::-webkit-inner-spin-button{
-    -webkit-appearance: none;
-}
 .btn-dark{
     background-color: var(--Verydark);
     font-size: .95em;
@@ -268,6 +249,9 @@ input[type="number"]::-webkit-inner-spin-button{
     #backcard-content{
         top: 43%;
         right: 15%;
+    }
+    form{
+        margin-top: .5rem;
     }
 }
 @media (max-width: 414px) {
