@@ -20,6 +20,7 @@ const checkNumberCard = document.querySelector("#numberCardField .bi-check2-circ
 const errorNumberCard = document.querySelector("#numberCardField .bi-x-circle")
 const checkcvc = document.querySelector("#cvc-field .bi-check2-circle")
 const errorcvc = document.querySelector("#cvc-field .bi-x-circle")
+const formComplete = document.getElementById("form-complete")
 
 numberCard.innerText = "0000 0000 0000 0000";
 nameCard.innerText = "Jane Appleseed";
@@ -173,7 +174,8 @@ form.addEventListener("submit", (event) => {
             alert("Por favor, preencha todos os campos corretamente")
         }
         else{
-            alert("Formulário enviado com sucesso!")
+            form.classList.add("d-none")
+            formComplete.classList.remove("d-none")
         }
     }
 })
