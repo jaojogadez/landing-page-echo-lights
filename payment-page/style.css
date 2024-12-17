@@ -166,12 +166,20 @@ input:focus, select:focus{
 /* Check Message End */
 h1{
     letter-spacing: 3px;
+    animation: fade .3s linear;
 }
 #form-complete{
     margin-top: calc(7vw) !important;
 }
 #form-complete p{
     color: var(--Darkgrayish);
+    animation: fade .4s linear;
+}
+#form-complete img{
+    animation: fade .2s linear;
+}
+#form-complete input{
+    animation: fade .45s linear;
 }
 @media (min-width: 1400px){  
     #backcard-content{
@@ -301,6 +309,18 @@ h1{
     }
     100%{
         transform: translateX(-10px);
+    }
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        transform: translateY(0);
     }
 }
 .shake-error{
