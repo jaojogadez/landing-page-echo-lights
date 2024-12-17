@@ -18,6 +18,9 @@ html, body{
     font: normal normal 18px var(--secondary-font);
     overflow-x: hidden;
 }
+.alert{
+    z-index: 9999;
+}
 /* Cards Configuration Start */
 #front-card,
 #back-card {
@@ -236,10 +239,6 @@ h1{
     form{
         max-width: 100%;
         translate: 10vw 0;
-    }
-    .alert-danger{
-        top: -4rem;
-        right: 5.45rem;
     }
     #form-complete{
         margin-top: 0 !important;
