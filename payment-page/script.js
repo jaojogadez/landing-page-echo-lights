@@ -180,3 +180,13 @@ form.addEventListener("submit", (event) => {
     }
 })
 
+const clockMinute = document.querySelector(".alert div #minute")
+const clockSeconds = document.querySelector(".alert div #seconds")
+const clockMiliSeconds = document.querySelector(".alert div #miliseconds")
+let minute = 9
+clockMinute.textContent = "0" + minute
+window.onload = () =>{
+    setInterval(() => {
+        clockMinute.innerHTML = minute
+    }, 540000);
+}
