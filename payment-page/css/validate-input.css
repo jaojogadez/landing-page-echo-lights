@@ -1,0 +1,101 @@
+/* Form configuration start */
+label{
+    font: normal bold .85em var(--header-font);
+    letter-spacing: 2.5px;
+}
+input:focus, select:focus{
+    border: 1px solid var(--purple) !important;
+    box-shadow: none !important;
+}
+.btn-dark{
+    background-color: var(--Verydark);
+    font-size: .95em;
+    letter-spacing: 1px;
+}
+.btn-dark:hover{
+    background-color: var(--purple);
+}
+/* Form configuration end */
+/* Error Message Start */
+.form-control-error{
+    border: 2px solid var(--Red-inputerrors) !important;
+    animation: shake-error .13s 3;
+}
+.form-control-error-submit{
+    border: 3px solid var(--Red-inputerrors) !important;
+    animation: shake-error .13s 3;
+}
+.form-control-error:focus{
+    border: 2px solid var(--Red-inputerrors) !important;
+}
+.form-message-error-name::after{
+    content: "Digite no mínimo 3 letras e somente letras serão aceitas";
+    color: var(--Red-inputerrors);
+    text-transform: initial;
+    letter-spacing: 1px;
+    font-size: .85em;
+}
+.form-message-error-null::after{
+    content: "Por favor, preencha o campo";
+    color: var(--Red-inputerrors);
+    text-transform: initial;
+    letter-spacing: 1px;
+    font-size: .85em;
+}
+.form-message-error-limit::after{
+    content: "O limite de caracteres é 16";
+    color: var(--Red-inputerrors);
+    text-transform: initial;
+    letter-spacing: 1px;
+    font-size: .85em;
+}
+.form-message-error-select::after{
+    content: "Selecione uma opção";
+    color: var(--Red-inputerrors);
+    text-transform: initial;
+    letter-spacing: 1px;
+    font-size: .65em;
+}
+/* Error Message End */
+/* Check Message Start */
+.form-control-check{
+    border: 2px solid var(--Green-inputerrors) !important;
+}
+.form-control-check:focus{
+    border: 2px solid var(--Green-inputerrors) !important;
+}
+.bi-check2-circle{
+    color: var(--Green-inputerrors);
+    position: absolute;
+    top: 2.2rem;
+    right: 10px;
+}
+.bi-x-circle{
+    color: var(--Red-inputerrors);
+    position: absolute;
+    top: 2.2rem;
+    right: 10px;
+}
+#cvc-field .bi-check2-circle, #cvc-field .bi-x-circle{
+    right: 23px;
+}
+/* Check Message End */
+/* Complete Form Start */
+h1{
+    letter-spacing: 3px;
+    animation: fade .3s linear;
+}
+#form-complete{
+    margin-top: calc(7vw) !important;
+}
+#form-complete p{
+    color: var(--Darkgrayish);
+    animation: fade .4s linear;
+}
+#form-complete img{
+    animation: fade .2s linear;
+}
+#form-complete input{
+    animation: fade .45s linear;
+}
+/* Complete Form End */
