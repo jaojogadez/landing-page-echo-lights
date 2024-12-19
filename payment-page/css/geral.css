@@ -44,7 +44,6 @@ html, body{
     background-size: cover;
 }
 #aligment-cards{
-    text-align: center;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
