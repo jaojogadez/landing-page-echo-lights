@@ -16,7 +16,12 @@
 <body>
   <div class="alert alert-danger container-fluid w-100 m-0 position-fixed  fw-bold fs-5 shadow-sm d-flex justify-content-center align-items-center gap-3" role="alert" data-aos="fade-down">
     <i class="bi bi-alarm"></i>
-    <span>00:00</span>
+    <span>00:00</span> 
+    <i 
+      class="bi bi-question-circle" 
+      style="font-size: .7em; cursor: pointer;"
+      data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title='<strong>Oportunidade única</strong><br>Após o tempo acabar não será mais possível utilizar o cupom "Vai Corinthians10"'
+      ></i>
   </div>
   <div class="container-fluid p-0 d-flex align-items-center justify-content-center">
     <div class="row align-items-center gx-5 w-100">
@@ -207,6 +212,8 @@
   <script src="script.js"></script>
   <script>
     AOS.init();
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
   </script>
 </body>
 </html>

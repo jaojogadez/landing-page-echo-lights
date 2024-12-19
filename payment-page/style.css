@@ -18,8 +18,20 @@ html, body{
     font: normal normal 18px var(--secondary-font);
     overflow-x: hidden;
 }
-.alert{
+.blocked{
+    cursor: not-allowed;
+}
+.bi-question-circle{
+    cursor: pointer;
+    font-size: .7em;
     z-index: 9999;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: !important;
+}
+.alert{
+    z-index: 999;
 }
 /* Cards Configuration Start */
 #front-card,

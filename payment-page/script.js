@@ -181,3 +181,22 @@ form.addEventListener("submit", (event) => {
 })
 
 
+const $timer = document.querySelector(".alert span");
+let timeLeft = 15 * 60;
+let intervalTimer;
+function updateTimer(){
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+    seconds = seconds < 10 ? `0${seconds}` : seconds;
+    const formattedTimer = `${minutes}:${seconds}`;
+    $timer.textContent = formattedTimer;
+    if(timeLeft === 0){
+        $timer.textContent = "Tempo esgotado!"
+        clearInterval(intervalTimer);
+    }else{
+        timeLeft--
+    }
+}
+intervalTimer = setInterval(updateTimer, 1000);
+updateTimer()
