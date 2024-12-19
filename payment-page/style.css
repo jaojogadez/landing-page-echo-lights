@@ -45,7 +45,6 @@ html, body{
     background-size: cover;
 }
 #aligment-cards{
-    text-align: center;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -196,12 +195,15 @@ h1{
 #form-complete input{
     animation: fade .45s linear;
 }
+#aligment-cards, form{
+    margin-top: 4rem;
+}  
 @media (min-width: 1400px){  
     #backcard-content{
         top: 6rem;
     }
 }
-@media (min-width: 768px) and (max-width: 1300px){  
+@media (min-width: 768px) and (max-width: 1300px){
     #backcard-content{
         top: 4.5rem;
     }
