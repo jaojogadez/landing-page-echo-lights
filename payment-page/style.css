@@ -197,6 +197,17 @@ h1{
 }
 #aligment-cards, form{
     margin-top: 4rem;
+}
+@media (min-width: 2000px){  
+    #backcard-content{
+        top: 6rem;
+    }
+    form{
+        translate: 0 0 !important;
+    }
+    #aligment-cards{
+        left: 12rem;
+    }
 }  
 @media (min-width: 1400px){  
     #backcard-content{
