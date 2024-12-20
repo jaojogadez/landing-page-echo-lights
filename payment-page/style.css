@@ -236,7 +236,7 @@ h1{
     #back-card{
         transform: translate(0px, 90%);
     }
-    form{
+    form, #form-complete{
         max-width: 100%;
         translate: 10vw 0;
     }
