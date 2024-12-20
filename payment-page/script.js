@@ -170,8 +170,10 @@ form.addEventListener("submit", (event) => {
                 hasError = true
             }
         })
-        if(hasError === true){
-            alert("Por favor, preencha todos os campos corretamente")
+        if(hasError){
+            const toastLiveExample = document.getElementById('liveToast')
+            const toast = new bootstrap.Toast(toastLiveExample)
+            toast.show()
         }
         else{
             form.classList.add("d-none")
