@@ -225,7 +225,8 @@ h1{
         position: absolute;
         gap: 20px;
         top: 50%;
-        transform: translate(50%,-115%);
+        
+        transform: translate(20%, -120%);
     }
     #front-card{
         top: -20%;
@@ -234,11 +235,10 @@ h1{
         margin-bottom: 20px;
     }    
     #back-card{
-        transform: translate(0px, 90%);
+        transform: translate(-21%, 90%);
     }
     form, #form-complete{
         max-width: 100%;
-        translate: 10vw 0;
     }
     #form-complete{
         margin-top: 0 !important;
