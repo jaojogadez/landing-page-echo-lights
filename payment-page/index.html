@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="col-md-8 p-3">
-        <form class="container col-md-6">
+        <form class="container col-md-6" id="form-one">
           <!-- Name -->
           <div class="mb-3 text-uppercase small fw-bold position-relative" id="nameField">
             <label for="cardholder-name" class="form-label" data-aos="fade-up">Nome completo</label>
@@ -71,7 +71,7 @@
               type="text" 
               class="form-control" 
               id="cardholder-name" 
-              placeholder="e.g. Jane Appleseed"
+              placeholder="ex. Jane Appleseed"
               required
               autocomplete="name"
               minlength="3"
@@ -89,7 +89,7 @@
               type="text" 
               class="form-control" 
               id="cardholder-number" 
-              placeholder="e.g. 1234 5678 9123 0000"
+              placeholder="ex. 1234 5678 9123 0000"
               maxlength="19"
               required
               autocomplete="cc-number"
@@ -172,7 +172,7 @@
                 type="text"
                 class="form-control"
                 id="cardholder-cvc"
-                placeholder="e.g. 123"
+                placeholder="ex. 123"
                 required
                 autocomplete="on"
                 maxlength="3"
@@ -199,6 +199,116 @@
             </p>
             <input type="submit" value="Continue" class="btn btn-dark w-100 mt-3">
         </div>
+        <form class="container col-md-6 d-none" id="form-two">
+          <!-- Name -->
+          <div class="mb-3 text-uppercase small fw-bold position-relative" id="nameFieldTwo">
+            <label for="cardholder-name" class="form-label" data-aos="fade-up">Nome completo</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="name-complete" 
+              placeholder="ex. Jane Appleseed"
+              required
+              autocomplete="name"
+              minlength="3"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              >
+              <i class="bi bi-check2-circle d-none"></i>
+              <i class="bi bi-x-circle d-none"></i>
+          </div>
+          <!-- CPF -->
+          <div class="row">
+            <div class="col-md-6 mb-3 text-uppercase small fw-bold position-relative" id="numberCardField">
+              <label for="cardholder-number" class="form-label" data-aos="fade-up"
+              data-aos-delay="250">CPF</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cpf-input"
+                placeholder="ex. 123 456 789 - 00"
+                required
+                autocomplete="on"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                >
+                <i class="bi bi-check2-circle d-none"></i>
+                <i class="bi bi-x-circle d-none"></i>
+            </div>
+            <!-- TEL -->
+            <div class="col-md-6 mb-3 text-uppercase small fw-bold position-relative" id="numberCardField">
+              <label for="cardholder-number" class="form-label" data-aos="fade-up"
+              data-aos-delay="250">Celular</label>
+              <input
+                type="text"
+                class="form-control"
+                id="tel-input"
+                placeholder="ex. (00) 12345 6789"
+                required
+                autocomplete="tel"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                >
+                <i class="bi bi-check2-circle d-none"></i>
+                <i class="bi bi-x-circle d-none"></i>
+            </div>
+          </div>
+          <!-- CEP -->
+          <div class="mb-3 text-uppercase small fw-bold position-relative" id="numberCardField">
+            <label for="cardholder-number" class="form-label" data-aos="fade-up"
+            data-aos-delay="250">Cep</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cep-input"
+              placeholder="ex. 12345 - 678"
+              required
+              autocomplete="address-level1"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              >
+              <i class="bi bi-check2-circle d-none"></i>
+              <i class="bi bi-x-circle d-none"></i>
+          </div>
+          <div class="row">
+            <!-- ADDRESS -->
+            <div class="col-md-9 mb-3 text-uppercase small fw-bold position-relative" id="numberCardField">
+              <label for="cardholder-number" class="form-label" data-aos="fade-up"
+              data-aos-delay="250">Endereço</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address-input"
+                placeholder="ex. Rua das Flores"
+                required
+                autocomplete="street-address"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                >
+                <i class="bi bi-check2-circle d-none"></i>
+                <i class="bi bi-x-circle d-none"></i>
+            </div>
+            <!-- Number Address -->
+            <div class="col-md-3 mb-3 text-uppercase small fw-bold position-relative" id="numberCardField">
+              <label for="cardholder-number" class="form-label" data-aos="fade-up"
+              data-aos-delay="250">Número</label>
+              <input
+                type="text"
+                class="form-control"
+                id="numberAdress-input"
+                placeholder="ex. 123"
+                required
+                autocomplete="on"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                >
+                <i class="bi bi-check2-circle d-none"></i>
+                <i class="bi bi-x-circle d-none"></i>
+            </div>
+          </div>
+          <input type="submit" value="Finalizar Compra" class="btn btn-dark w-100 mb-5" data-aos="fade-up"
+          data-aos-delay="100">
+        </form>
       </div>
     </div>
   </div>
