@@ -30,4 +30,6 @@ https://jaojogadez.github.io/landing-page-echo-lights/
 
 
 
+<p align="center"> Desenvolvido por <a href="https://github.com/jaojogadez">João Pedro de Oliveira</a> </p>
+
 
