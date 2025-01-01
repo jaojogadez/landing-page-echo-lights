@@ -25,6 +25,14 @@ Desenvolvido sobre um projeto de robótica na escola, Echo Lights é o nome do p
 ## Acesse aqui🔥
 https://jaojogadez.github.io/landing-page-echo-lights/
 
+## 💪 Como Contribuir
+Contribuições são bem-vindas! Siga estas etapas para colaborar:
+1. Faça um fork do projeto.
+2. Crie uma nova branch para sua feature: `git checkout -b feature/nome-feature`.
+3. Commit suas mudanças: `git commit -m 'Adiciona nova feature'`.
+4. Envie para a branch: `git push origin feature/nome-feature`.
+5. Abra um Pull Request.
+
 ## Entre em contato ou envie um feedback 💬
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/14920006654)
 
