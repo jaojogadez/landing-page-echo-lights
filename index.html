@@ -864,7 +864,7 @@
           <p class="lh-base fs-5" data-aos="fade-up" data-aos-delay="400">
             Adiquira agora o seu Echo Lights com uma oferta imperdível. Seja rápido - estoques limitados!
           </p>
-          <a href="payment-page/index.html" target="_self">
+          <a href="" target="_self">
             <button
               type="button"
               id="buyEchoLights"
@@ -979,13 +979,14 @@
             </p>
             <div class="form-floating mb-3">
               <form method="post" class="form-floating">
-                <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Digite seu texto:">
+                <input type="text" class="form-control rounded-3" id="inputEnter" placeholder="Digite seu texto:">
                 <label for="floatingInput">Digite aqui:</label>
                 <button
                 type="button"
-                id="learnMoreBtn"
+                id="formBTN"
                 class="btn btn-primary rounded-pill mt-3 px-4 border-0 mb-5"
                 data-aos="fade-up" data-aos-delay="650"
+                data-bs-toggle="modal" data-bs-target="#formContact"
                 >
                   Enviar <i class="bi bi-envelope px-2"></i>
                 </button>
@@ -1036,6 +1037,40 @@
         </div>
       </div>
     </footer> 
+    <div class="modal fade" id="formContact" tabindex="-1" aria-labelledby="formContact" aria-hidden="true" data-bs-theme="dark">
+      <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content" id="formMessage" method="post" autocomplete="on">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="formContact">Por favor, preencha os campos corretamente.</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@email.com" autocomplete="email" required>
+              <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
+            </div>
+            <div class="mb-0">
+              <label for="floatingTextarea" class="mb-2">Mensagem</label>            
+              <textarea class="form-control" placeholder="Digite aqui sua mensagem" rows="3" id="floatingTextarea" required></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Fechar</button>
+            <a target="_blank">
+              <button
+                type="submit"
+                id="learnMoreBtn"
+                class="btn btn-primary rounded-pill px-4 border-0"
+                data-aos="fade-up" data-aos-delay="650"
+                >
+                  Enviar <i class="bi bi-envelope px-2"></i>
+              </button>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
     <!-- Footer End -->
     <!-- Main Content End -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

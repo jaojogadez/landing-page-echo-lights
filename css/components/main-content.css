@@ -51,11 +51,16 @@
 .btn-primary:active::after{
     background: transparent;
 }
-
 .btn:active{
     color: #000 !important;
     font-weight: bold;
 }
+
+.form-control:focus {
+    border-color: none;
+    box-shadow: none;
+}
+  
 
 
 /* About Section */

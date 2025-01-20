@@ -78,21 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
   typeEffect();
 });
 
-// // Script para dar zoom nas imagens
-// const images = document.querySelectorAll(".get-image")
-// images.forEach(image => {
-
-//   image.onclick = () => {
-//     document.body.classList.toggle("focus-img")
-
-//     const zoomContainer = document.createElement("div")
-//     zoomContainer.classList.add("col-md-6", "newZoomClass", "rounded-3", "border")
-//           document.body.appendChild(zoomContainer)
-
-//   }
-// })
-
-
 // Simular Palmas
 
 const statusSpan = document.getElementById("status-lights")
@@ -113,4 +98,19 @@ btnSimulate.onclick = () => {
     echolightsDesconnect.style.display = "block"
     echolightsConnect.style.display = "none"
   }
+}
+
+const $enterInput = document.querySelector("#inputEnter") 
+const $textarea = document.querySelector("textarea")
+const $form = document.getElementById("formMessage")
+const $btn = document.querySelector("#formBTN")
+
+$btn.onclick = () =>{
+  $textarea.value = $enterInput.value
+}
+
+$form.onsubmit = (event) => {
+  event.preventDefault()
+  alert("Form enviado!")
+  $form.reset()
 }
