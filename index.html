@@ -1050,17 +1050,22 @@
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@email.com" autocomplete="email" required>
               <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
             </div>
-            <div class="mb-0">
+            <div class="mb-3">
               <label for="floatingTextarea" class="mb-2">Mensagem</label>            
               <textarea class="form-control" placeholder="Digite aqui sua mensagem" rows="3" id="floatingTextarea" required></textarea>
             </div>
+            <div class="col text-center d-none">
+              <i class="bi bi-send-check" style="font-size: 5em; color: skyblue;"></i>
+              <h5>Sua dúvida mensagem foi enviada!</h5>
+              <p>Aguarde até 24 horas para receber sua resposta na caixa de entrada do seu email.</p>
+            </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Fechar</button>
+            <button type="button" id="closeButton" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Fechar</button>
             <a target="_blank">
               <button
                 type="submit"
-                id="learnMoreBtn"
+                id="modalBTN"
                 class="btn btn-primary rounded-pill px-4 border-0"
                 data-aos="fade-up" data-aos-delay="650"
                 >
