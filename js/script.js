@@ -105,6 +105,7 @@ const $form = document.getElementById("formMessage");
 const $btnModal = document.querySelector("#modalBTN");
 const $btn = document.querySelector("#formBTN");
 const $closeBtn = document.querySelector("#closeButton");
+const $email = document.querySelector("#formMessage input[name=email]");
 const $formContent = document.querySelectorAll(
   "#formContact .modal-body .mb-3"
 );
@@ -112,13 +113,22 @@ const $formSuccessContent = document.querySelector(
   "#formContact .modal-body .col"
 );
 
-console.log($formContent);
 $btn.onclick = () => {
   $textarea.value = $enterInput.value;
 };
 
 $form.onsubmit = (event) => {
   event.preventDefault();
+  const email = $email.value;
+  const message = $textarea.value;
+  fetch("https://api.sheetmonkey.io/form/aXccXJipGnW2C54vqqswAu", {
+    method: "post",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, message }),
+  });
   successForm();
 };
 
@@ -131,8 +141,7 @@ let successForm = () => {
   $formSuccessContent.classList.remove("d-none");
 };
 
-
-$closeBtn.onclick = () => hiddenModal()
+$closeBtn.onclick = () => hiddenModal();
 
 let hiddenModal = () => {
   $btnModal.style.display = "block";

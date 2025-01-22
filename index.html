@@ -1039,7 +1039,7 @@
     </footer> 
     <div class="modal fade" id="formContact" tabindex="-1" aria-labelledby="formContact" aria-hidden="true" data-bs-theme="dark">
       <div class="modal-dialog modal-dialog-centered">
-        <form class="modal-content" id="formMessage" method="post" autocomplete="on">
+        <form class="modal-content" id="formMessage" autocomplete="on">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="formContact">Por favor, preencha os campos corretamente.</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1047,16 +1047,16 @@
           <div class="modal-body">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@email.com" autocomplete="email" required>
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@email.com" autocomplete="email" required>
               <div id="emailHelp" class="form-text">Nunca compartilharemos seu e-mail com mais ninguém.</div>
             </div>
             <div class="mb-3">
               <label for="floatingTextarea" class="mb-2">Mensagem</label>            
-              <textarea class="form-control" placeholder="Digite aqui sua mensagem" rows="3" id="floatingTextarea" required></textarea>
+              <textarea class="form-control" name="message" placeholder="Digite aqui sua mensagem" rows="3" id="floatingTextarea" required></textarea>
             </div>
             <div class="col text-center d-none">
               <i class="bi bi-send-check" style="font-size: 5em; color: skyblue;"></i>
-              <h5>Sua dúvida mensagem foi enviada!</h5>
+              <h5>Sua dúvida foi enviada!</h5>
               <p>Aguarde até 24 horas para receber sua resposta na caixa de entrada do seu email.</p>
             </div>
           </div>
