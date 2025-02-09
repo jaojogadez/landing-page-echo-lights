@@ -1,6 +1,8 @@
 # Echo Lights - Landing Page
 
-![Design preview for the home web site](./design/echo-lights-home.png)
+![Template Projeto](https://github.com/user-attachments/assets/fa0d53c3-e450-45b4-8e52-c7ff6b99e416)
+
+
 
 ## Sobre 👋
 Desenvolvido sobre um projeto de robótica na escola, Echo Lights é o nome do produto final. O site do projeto apresenta suas funcionalidades, o processo de criação e as tecnologias utilizadas, mostrando o aprendizado em robótica e programação. 
